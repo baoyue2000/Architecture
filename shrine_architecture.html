@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本神社建築</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .page {
+            display: none;
+            width: 100%;
+            max-width: 800px;
+        }
+        .page.active {
+            display: block;
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
+        .back-link {
+            margin-top: 20px;
+        }
+        h1 {
+            color: blue;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="page1" class="page active">
+    <h1 onclick="showPage('page2')">日本神社建築</h1>
+      <img src="jinjya.jpg" alt="日本神社建築">
+</div>
+
+<div id="page2" class="page">
+    <h1>日本神社建築</h1>
+      <img src="jinjya.jpg" alt="日本神社建築">
+    <div class="navigation">
+        <a href="#" onclick="showPage('page3')">神明系（平入り）</a>
+        <a href="#" onclick="showPage('page4')">大社系（妻入り）</a>
+    </div>
+</div>
+
+<div id="page3" class="page">
+    <h1>神明系（平入り）</h1>
+      <img src="hira.jpg" alt="神明系（平入り）">
+    <ul>
+        <li><a href="#" onclick="showPage('page5')">神明造</a></li>
+        <li><a href="#" onclick="showPage('page6')">八幡造</a></li>
+        <li><a href="#" onclick="showPage('page7')">流造</a></li>
+        <li><a href="#" onclick="showPage('page8')">日吉造</a></li>
+        <li><a href="#" onclick="showPage('page9')">権現造</a></li>
+    </ul>
+    <div class="back-link"><a href="#" onclick="showPage('page2')">戻る</a></div>
+</div>
+
+<div id="page4" class="page">
+    <h1>大社系（妻入り）</h1>
+      <img src="tsuma.jpg" alt="大社系（妻入り）">
+    <ul>
+        <li><a href="#" onclick="showPage('page10')">大社造</a></li>
+        <li><a href="#" onclick="showPage('page11')">住吉造</a></li>
+        <li><a href="#" onclick="showPage('page12')">春日造</a></li>
+    </ul>
+    <div class="back-link"><a href="#" onclick="showPage('page2')">戻る</a></div>
+</div>
+
+<!-- 神明系（平入り）的详细页面 -->
+<div id="page5" class="page">
+    <h1>神明造</h1>
+    <img src="shimmei.jpg" alt="神明造">
+    <p>［様式］切妻造平入り／直線型（llタイプ）／白木仕様（塗装なし）<br>
+    ［特徴］神明造（しんめいづくり）は、伊勢神宮正殿を代表とする建築様式で、古代の倉をもとにしたものとされ、穀物庫、いわゆる高床式倉庫から発展したものと考えられています。屋根には千木と堅魚木を用い、堀立柱を基礎とします。建物としては、奥行きよりも横幅が広いものが多く、直線的な造りとなります。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page3')">戻る</a></div>
+</div>
+
+<div id="page6" class="page">
+    <h1>八幡造</h1>
+    <img src="hachiman.jpg" alt="八幡造">
+    <p>［様式］切妻造平入り／二棟連結型（Mタイプ）<br>
+    ［特徴］八幡造（はちまんづくり）は、大分県の宇佐八幡宮に代表される建築様式で、建物を前後に繋げたところにその特徴があります。それぞれを前殿（まえどの）・後殿（うしろどの）と称し、中央を相の間（あいのま）と呼びますが、両殿とも本殿扱いとなります。日光東照宮を代表とする権現造は、この八幡造を発展させたものになります。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page3')">戻る</a></div>
+</div>
+
+<div id="page7" class="page">
+    <h1>流造</h1>
+    <img src="nagare.jpg" alt="流造">
+    <p>［様式］切妻造平入り／延長庇型（へタイプ）<br>
+    ［特徴］流造（ながれづくり）は、京都の上賀茂神社、下鴨神社を代表とする建築様式で、入り口側の庇（ひさし）が、大きく曲線を描きながら延びた屋根を持つのが特徴となっています。この様式は、全国で最も多いとされます。また、両面とも庇が延びたもので、両流造（りょうながれづくり）と呼ばれるものもあります。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page3')">戻る</a></div>
+</div>
+
+<div id="page8" class="page">
+    <h1>日吉造</h1>
+    <img src="hie.jpg" alt="日吉造">
+    <p>［様式］切妻造平入り／四方庇型（八タイプ）<br>
+    ［特徴］日吉造（ひえづくり）は、滋賀県の日吉大社を代表とする建築様式で、庇（ひさし）が、前後のみならず、左右両脇にも庇がついているのが特徴となっています。ただ、後方の庇は短く、これに似たものに、入母屋造（いりもやづくり）がありますが、これは、後方の庇も長く、寺院に多くみられます。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page3')">戻る</a></div>
+</div>
+
+<div id="page9" class="page">
+    <h1>権現造</h1>
+    <img src="gongen.jpg" alt="権現造">
+    <p>［様式］切妻造平入り／二棟連結型（Mタイプ）<br>
+    ［特徴］権現造（ごんげんづくり）は、栃木県の日光東照宮や京都の北野天満宮を代表とする建築様式で、一見、八幡造と大差がありません。ただし、八幡造は、前後全てが本殿なのに対し、権現造は、後方のみが本殿となります。そして、両殿の連結部を石の間と呼び、床が低いままなのが特徴となっています。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page3')">戻る</a></div>
+</div>
+
+<!-- 大社系（妻入り）的详细页面 -->
+<div id="page10" class="page">
+    <h1>大社造</h1>
+    <img src="taisha.jpg" alt="大社造">
+    <p>［様式］切妻造妻入り／白木仕様（塗装なし）<br>
+    ［特徴］大社造（たいしゃづくり）は、島根県の出雲大社本殿を代表とする建築様式で、古代の宮殿をもとにしたものとされ、屋根に千木と堅魚木を持ちます。また、形も正方形に近く、古典的な日本家屋の形状に近いともされます。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page4')">戻る</a></div>
+</div>
+
+<div id="page11" class="page">
+    <h1>住吉造</h1>
+    <img src="sumiyoshi.jpg" alt="住吉造">
+    <p>［様式］切妻造妻入り／丹（朱色）塗り<br>
+    ［特徴］住吉造（すみよしづくり）は、大阪府の住吉大社本殿を代表とする建築様式で、屋根に千木と堅魚木を持ちます。特に、社殿の内部が二室に分かれるのが特徴で、床も若干低くなっております。また、縁がなく、玉垣で覆われているのも特徴となっています。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page4')">戻る</a></div>
+</div>
+
+<div id="page12" class="page">
+    <h1>春日造</h1>
+    <img src="kashiga.jpg" alt="春日造">
+    <p>［様式］切妻造妻入り／前方庇取付小型<br>
+    ［特徴］春日造（かすがづくり）は、奈良県の春日大社本殿を代表とする建築様式で、正面に庇を取り付けているのが特徴となっています。また、非常に曲線的で、サイズも非常に小さいこともこの春日造の特徴のひとつとなっており、住吉造と同じく、丹（朱色）塗りされることが多く、縁がないものがこの春日造となります。</p>
+    <div class="back-link"><a href="#" onclick="showPage('page4')">戻る</a></div>
+</div>
+
+<script>
+    function showPage(pageId) {
+        var pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+    }
+
+    document.getElementById('page1').onclick = function() {
+        showPage('page2');
+    };
+</script>
+
+</body>
+</html>
